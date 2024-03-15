@@ -9,6 +9,7 @@ class PageFormRegister extends StatefulWidget {
   State<PageFormRegister> createState() => _PageFormRegisterState();
 }
 
+
 class _PageFormRegisterState extends State<PageFormRegister> {
   //Untuk mendapatkan value dari text field
   TextEditingController txtUsername = TextEditingController();
