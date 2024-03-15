@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:mi2c_mobile/screen_page/page_login.dart';
+
 
 class PageFormRegister extends StatefulWidget {
   const PageFormRegister({super.key});
