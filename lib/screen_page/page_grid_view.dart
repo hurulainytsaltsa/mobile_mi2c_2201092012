@@ -85,11 +85,11 @@ class _CustomeGridState extends State<CustomeGrid> {
               crossAxisCount: 2),
           itemBuilder: (context, index){
             return GestureDetector(
-              // onTap: (){
-              //   Navigator.push(
-              //       context,
-              //       MaterialPageRoute(builder: (_)=> DetailGrid(listMovie[index])));
-              // },
+              onTap: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_)=> DetailGrid(listMovie[index])));
+              },
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: GridTile(
@@ -122,3 +122,47 @@ class _CustomeGridState extends State<CustomeGrid> {
     );
   }
 }
+
+class DetailGrid extends StatelessWidget {
+  final Map<String, dynamic> detailMovie;
+
+  const DetailGrid(this.detailMovie, {Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(detailMovie["judul"]),
+        ),
+        body: Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Center(
+                  child: Image.asset(
+                    "images/${detailMovie["gambar"]}",
+                    width: 200,
+                  ),
+                ),
+                SizedBox(height: 20),
+                Center(
+                  child: Text(
+                    "Judul: ${detailMovie["judul"]}",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                SizedBox(height: 10),
+                Center(
+                  child: Text(
+                    "Harga: Rp. ${detailMovie["harga"]}",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
+              ],
+            ),
+           ),
+       );
+  }
+}
+
