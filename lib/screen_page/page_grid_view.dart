@@ -161,7 +161,6 @@ class DetailGrid extends StatelessWidget {
               ),
             ],
           ),
-
         ),
        );
   }
