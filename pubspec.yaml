@@ -71,6 +71,12 @@ flutter:
      - gambar/movie4.jpeg
      - gambar/movie5.jpeg
      - gambar/movie6.jpeg
+     - gambar/movie7.jpeg
+     - gambar/movie8.jpg
+     - gambar/movie9.jpeg
+     - gambar/movie10.jpg
+     - gambar/movie11.jpg
+     - gambar/movie12.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

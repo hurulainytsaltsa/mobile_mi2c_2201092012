@@ -30,7 +30,7 @@ class _CustomeGridState extends State<CustomeGrid> {
       "harga": 45000
     },
     {
-      "judul": "Kore Action",
+      "judul": "Korean Action",
       "gambar": "movie5.jpeg",
       "harga": 35000
     },
@@ -40,33 +40,33 @@ class _CustomeGridState extends State<CustomeGrid> {
       "harga": 45000
     },
     {
-      "judul": "Ciao Alberto",
-      "gambar": "movie1.jpg",
+      "judul": "Encanto",
+      "gambar": "movie7.jpeg",
       "harga": 45000
     },
     {
-      "judul": "The Simpson",
-      "gambar": "movie2.jpg",
+      "judul": "Coco",
+      "gambar": "movie8.jpg",
       "harga": 35000
     },
     {
-      "judul": "Jungle Cruise",
-      "gambar": "movie3.jpg",
+      "judul": "Turning red",
+      "gambar": "movie9.jpeg",
       "harga": 50000
     },
     {
-      "judul": "Home Alone",
-      "gambar": "movie4.jpeg",
+      "judul": "Avatar The Way of Water",
+      "gambar": "movie10.jpg",
       "harga": 45000
     },
     {
-      "judul": "Kore Action",
-      "gambar": "movie5.jpeg",
+      "judul": "Mencuri Raden Saleh",
+      "gambar": "movie11.jpg",
       "harga": 35000
     },
     {
-      "judul": "A Monster Calls",
-      "gambar": "movie6.jpeg",
+      "judul": "Avengers Infinity War",
+      "gambar": "movie12.jpg",
       "harga": 45000
     },
   ];
@@ -136,32 +136,33 @@ class DetailGrid extends StatelessWidget {
         ),
         body: Padding(
             padding: EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Center(
-                  child: Image.asset(
-                    "images/${detailMovie["gambar"]}",
-                    width: 200,
-                  ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Center(
+                child: Image.asset(
+                  "gambar/${detailMovie["gambar"]}",
+                  width: 200,
                 ),
-                SizedBox(height: 20),
-                Center(
-                  child: Text(
-                    "Judul: ${detailMovie["judul"]}",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
+              ),
+              SizedBox(height: 20),
+              Center(
+                child: Text(
+                  "Judul: ${detailMovie["judul"]}",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 10),
-                Center(
-                  child: Text(
-                    "Harga: Rp. ${detailMovie["harga"]}",
-                    style: TextStyle(fontSize: 16),
-                  ),
+              ),
+              SizedBox(height: 10),
+              Center(
+                child: Text(
+                  "Harga: Rp. ${detailMovie["harga"]}",
+                  style: TextStyle(fontSize: 16),
                 ),
-              ],
-            ),
-           ),
+              ),
+            ],
+          ),
+
+        ),
        );
   }
 }
