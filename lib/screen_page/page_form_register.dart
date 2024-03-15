@@ -61,7 +61,6 @@ class _PageFormRegisterState extends State<PageFormRegister> {
                     return val!.isEmpty ? "Tidak boleh kosong" : null;
                   },
                   controller: txtFullName,
-                  obscureText: true, //biar password tidak kelihatan
                   decoration: InputDecoration(
                       hintText: 'Fullname',
                       border: OutlineInputBorder(
@@ -90,7 +89,6 @@ class _PageFormRegisterState extends State<PageFormRegister> {
                     return val!.isEmpty ? "Tidak boleh kosong" : null;
                   },
                   controller: txtEmail,
-                  obscureText: true, //biar password tidak kelihatan
                   decoration: InputDecoration(
                       hintText: 'Email',
                       border: OutlineInputBorder(
@@ -108,7 +106,6 @@ class _PageFormRegisterState extends State<PageFormRegister> {
                     return val!.isEmpty ? "Tidak boleh kosong" : null;
                   },
                   controller: txtTglLahir,
-                  obscureText: true, //biar password tidak kelihatan
                   decoration: InputDecoration(
                       hintText: 'Tanggal Lahir',
                       border: OutlineInputBorder(
@@ -208,34 +205,55 @@ class _PageFormRegisterState extends State<PageFormRegister> {
                     ),
                   ],
                 ),
-
+                const SizedBox(
+                  height: 25,
+                ),
                 SizedBox(height: 15,),
-                MaterialButton(onPressed: () {
-                  //cara get data dari text form field
-                  setState(() {
-                    String username = txtUsername.text;
-                    String pwd = txtPassword.text;
-
-                    print('Hasil login: ${username} dan pwd = ${pwd}');
-
-                    if (txtUsername.text == 'admin' &&
-                        txtPassword.text == '123456') {
-                      Navigator.push(context,
-                          MaterialPageRoute(
-                              builder: (context) => PageLoginBerhasil()));
-                    } else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text("Password dan Username anda salah"),
-                          backgroundColor: Colors.orange,
-                        ),
-                      );
-                    }
-                  });
-                },
-                  child: Text('SIMPAN'),
+                MaterialButton(
                   color: Colors.green,
-                  textColor: Colors.white,
+                  minWidth: 200,
+                  height: 45,
+                  onPressed: () {
+                    if (keyForm.currentState?.validate() == true) {
+                      if (valJk != null && valAgama != null) {
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                title: const Text("Data Register"),
+                                content: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment:
+                                  MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Text("Fullname :${txtFullName.text}"),
+                                    Text("Username :${txtUsername.text}"),
+                                    Text("Email : ${txtEmail.text}"),
+                                    Text("Password :${txtPassword.text}"),
+                                    Text("Agama : $valAgama"),
+                                    Text("Jenis Kelamin : $valJk"),
+                                    Text("Tanggal Lahir :${txtTglLahir.text}")
+                                  ],
+                                ),
+                                actions: [
+                                  TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: const Text("Dismiss"))
+                                ],
+                              );
+                            });
+                      } else {
+                        ScaffoldMessenger.of(context)
+                            .showSnackBar(const SnackBar(
+                          content: Text("Pilih agama dan jenis kelamin"),
+                          backgroundColor: Colors.green,
+                        ));
+                      }
+                    }
+                  },
+                  child: const Text("SIMPAN"),
                 )
               ],
             ),
