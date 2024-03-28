@@ -3,6 +3,7 @@ import 'package:mi2c_mobile/screen_page/page_column.dart';
 import 'package:mi2c_mobile/screen_page/page_form_register.dart';
 import 'package:mi2c_mobile/screen_page/page_grid_view.dart';
 import 'package:mi2c_mobile/screen_page/page_passing_data.dart';
+import 'package:mi2c_mobile/screen_page/page_search_list.dart';
 
 class PageBottomNavigationBar extends StatefulWidget {
   const PageBottomNavigationBar({super.key});
@@ -35,7 +36,7 @@ with SingleTickerProviderStateMixin{
         children: const [
           PageFormRegister(),
           CustomeGrid(),
-          PageColumnRow()
+          PageSearchList()
         ],
       ),
 
