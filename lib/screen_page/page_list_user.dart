@@ -59,28 +59,28 @@ class _PageListUserState extends State<PageListUser> {
           itemCount: listUser.length,
           itemBuilder: (context, index){
             return Padding(
-                padding: EdgeInsets.all(10),
-            child: Card(
-              child: ListTile(
-                title: Text(
-                  listUser[index].name ?? "",
-                  style: TextStyle(
-                    color: Colors.deepOrange,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18
+              padding: EdgeInsets.all(10),
+              child: Card(
+                child: ListTile(
+                  title: Text(
+                    listUser[index].name ?? "",
+                    style: TextStyle(
+                        color: Colors.deepOrange,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18
+                    ),
+                  ),
+                  subtitle: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Email :  ${listUser[index].email}" ?? ""),
+                      Text("Address City :  ${listUser[index].address.city}" ?? ""),
+                      Text("Company :  ${listUser[index].company.name}" ?? ""),
+                    ],
                   ),
                 ),
-                subtitle: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Email :  ${listUser[index].email}" ?? ""),
-                    Text("Address City :  ${listUser[index].address.city}" ?? ""),
-                    Text("Company :  ${listUser[index].company.name}" ?? ""),
-                  ],
-                ),
-              ),
-            ),);
+              ),);
           }),
     );
   }
