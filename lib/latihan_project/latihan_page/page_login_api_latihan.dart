@@ -1,11 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import "package:http/http.dart" as http;
-import 'package:mi2c_mobile/latihan_page/page_bottom_navigation_latihan.dart';
-import 'package:mi2c_mobile/latihan_page/page_list_berita_latihan.dart';
-import 'package:mi2c_mobile/latihan_page/page_register_api_latihan.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/page_bottom_navigation_latihan.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/page_register_api_latihan.dart';
 
-import '../modal/modal_latihan_login.dart';
+import '../model/model_latihan_login.dart';
 import '../utils/session_manager_latihan.dart';
 
 class PageLoginApiLatihan extends StatefulWidget {

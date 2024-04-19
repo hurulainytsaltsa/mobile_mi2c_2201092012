@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mi2c_mobile/latihan_page/page_login_api_latihan.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/page_login_api_latihan.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mi2c_mobile/latihan_page/page_beranda_latihan.dart';
-import 'package:mi2c_mobile/latihan_page/page_bottom_navigation_latihan.dart';
-import 'package:mi2c_mobile/latihan_page/page_list_berita_latihan.dart';
-import 'package:mi2c_mobile/latihan_page/page_login_api_latihan.dart';
-import 'package:mi2c_mobile/latihan_page/splash_screen.dart';
-import 'package:mi2c_mobile/latihansatu2201092012.dart';
-import 'package:mi2c_mobile/screen_page/page_beranda.dart';
-import 'package:mi2c_mobile/screen_page/page_register_api.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,15 +33,6 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         home: const SplashScreen(),
-        // onGenerateRoute: (settings) {
-        //   switch (settings.name) {
-        //     case '/home':
-        //       return MaterialPageRoute(
-        //           builder: (context) => PageLoginApiLatihan());
-        //     default:
-        //       return MaterialPageRoute(builder: (context) => SplashScreen());
-        //   }
-        // }
         );
   }
 }

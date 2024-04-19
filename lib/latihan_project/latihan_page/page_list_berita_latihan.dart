@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
-import 'package:mi2c_mobile/latihan_page/page_detail_berita_latihan.dart';
-import 'package:mi2c_mobile/latihan_page/page_login_api_latihan.dart';
-import '../modal/model_latihan_berita.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/page_detail_berita_latihan.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/page_login_api_latihan.dart';
+import '../model/model_latihan_berita.dart';
 import '../utils/session_manager_latihan.dart';
 
 class PageListLatihanBerita extends StatefulWidget {
@@ -55,7 +55,7 @@ class _PageListLatihanBeritaState extends State<PageListLatihanBerita> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Aplikasi Berita'),
+        title: Center(child: Text('Aplikasi Berita')),
         backgroundColor: Colors.cyan,
         actions: [
           TextButton(onPressed: (){}, child: Text('Hi .. ${session.userName}')),
@@ -110,10 +110,8 @@ class _PageListLatihanBeritaState extends State<PageListLatihanBerita> {
                   }
                   return ListView.builder(
                       itemCount: filteredBeritaList!.length,
-                      //itemCount: snapshot.data?.length ?? 0,
                       itemBuilder: (context, index) {
                         Datum data = filteredBeritaList![index];
-                        //Datum? data = snapshot.data?[index];
                         return Padding(
                           padding: EdgeInsets.all(10),
                           child: GestureDetector(

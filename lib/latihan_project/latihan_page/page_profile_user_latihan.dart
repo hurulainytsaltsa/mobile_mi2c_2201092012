@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mi2c_mobile/latihan_page/page_edit_profile.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/page_edit_profile_latihan.dart';
 
 import '../utils/session_manager_latihan.dart';
 
@@ -40,6 +40,7 @@ class _PageProfileUserState extends State<PageProfileUser> {
           padding: const EdgeInsets.all(8.0),
           child: SingleChildScrollView(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
                     radius: 55,
@@ -59,23 +60,42 @@ class _PageProfileUserState extends State<PageProfileUser> {
                 SizedBox(
                   height: 10,
                 ),
-                Text('Username : ${session.userName}'),
-                Text('Email : ${session.email}'),
-                Text('No HP : ${session.nohp}'),
+                Divider(
+                  thickness: 2,
+                  color: Colors.grey[300],
+                ),
+                ListTile(
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.person),
+                      SizedBox(width: 8),
+                      Text('Username : ${session.userName}'),
+                    ],
+                  ),
+                ),
+                ListTile(
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.email),
+                      SizedBox(width: 8),
+                      Text('Email : ${session.email}'),
+                    ],
+                  ),
+                ),
+                ListTile(
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.phone),
+                      SizedBox(width: 8),
+                      Text('No HP : ${session.nohp}'),
+                    ],
+                  ),
+                ),
                 SizedBox(
                   height: 10,
-                ),
-                MaterialButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: const BorderSide(width: 1, color: Colors.blueGrey)),
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => PageEditProfile()));
-                  },
-                  child: Text('Edit Profile'),
                 ),
               ],
             ),

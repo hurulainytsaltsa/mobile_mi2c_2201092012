@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mi2c_mobile/latihan_page/page_list_berita_latihan.dart';
-import 'package:mi2c_mobile/latihan_page/page_list_user_latihan.dart';
-import 'package:mi2c_mobile/latihan_page/page_login_api_latihan.dart';
-import 'package:mi2c_mobile/latihan_page/page_register_api_latihan.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/page_list_berita_latihan.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/page_login_api_latihan.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/page_register_api_latihan.dart';
 
 class PageBerandaLatihan extends StatelessWidget {
   const PageBerandaLatihan({super.key});
@@ -16,7 +15,6 @@ class PageBerandaLatihan extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        //biar bisa scroll kalau widgetnya panjang ke bawah
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

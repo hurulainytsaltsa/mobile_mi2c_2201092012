@@ -1,11 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import "package:http/http.dart" as http;
-import 'package:mi2c_mobile/latihan_page/page_login_api_latihan.dart';
-import 'package:mi2c_mobile/modal/model_latihan_register.dart';
-
-
-import '../modal/model_register.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/page_login_api_latihan.dart';
+import 'package:mi2c_mobile/latihan_project/model/model_latihan_register.dart';
 
 class PageRegisterApiLatihan extends StatefulWidget {
   const PageRegisterApiLatihan({super.key});
@@ -45,7 +42,7 @@ class _PageRegisterApiState extends State<PageRegisterApiLatihan> {
           }
       );
 
-      ModelRegister data = modelRegisterFromJson(response.body);
+      ModelLatihanRegister data = modelLatihanRegisterFromJson(response.body);
       //Cek kondisi
       if (data.value == 1) {
         //Kondisi ketika berhasil register

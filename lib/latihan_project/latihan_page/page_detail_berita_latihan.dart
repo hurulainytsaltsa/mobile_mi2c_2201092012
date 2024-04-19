@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../modal/model_latihan_berita.dart';
+import '../model/model_latihan_berita.dart';
 
 class DetailBerita extends StatelessWidget {
   final Datum? data;
-  //const DetailBerita(this.data, {super.key});
+
   const DetailBerita(this.data, {Key? key}) : super(key: key);
 
   @override
@@ -31,9 +31,6 @@ class DetailBerita extends StatelessWidget {
               data?.judul ?? "",
               style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
             ),
-            // subtitle: Text(
-            //   DateFormat().format(data?.tglBerita ?? DateTime.now()),
-            // ),
             trailing: const Icon(
               Icons.star,
               color: Colors.red,

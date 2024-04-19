@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mi2c_mobile/latihan_page/page_list_berita_latihan.dart';
-import 'package:mi2c_mobile/latihan_page/page_list_user_latihan.dart';
-import 'package:mi2c_mobile/latihan_page/page_profile_user_latihan.dart';
-import 'package:mi2c_mobile/screen_page/page_register_api.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/page_list_berita_latihan.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/page_list_pegawai_latihan.dart';
+import 'package:mi2c_mobile/latihan_project/latihan_page/page_profile_user_latihan.dart';
 
 class PageBottomNavigationLatihan extends StatefulWidget {
   const PageBottomNavigationLatihan({super.key});
@@ -31,8 +30,7 @@ class _PageBottomNavigationLatihanState
         controller: tabController,
         children: const [
           PageListLatihanBerita(),
-          PageListUser(),
-          //PageRegisterApi(),
+          PageListPegawai(),
           PageProfileUser(),
         ],
       ),
@@ -50,10 +48,6 @@ class _PageBottomNavigationLatihanState
             icon: Icon(Icons.supervisor_account_sharp),
             label: "List User",
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.text_snippet),
-          //   label: "Search List",
-          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: "Profile",
