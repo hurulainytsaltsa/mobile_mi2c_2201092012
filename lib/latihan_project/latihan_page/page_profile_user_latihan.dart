@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mi2c_mobile/latihan_project/latihan_page/page_edit_profile_latihan.dart';
 
 import '../utils/session_manager_latihan.dart';
 
