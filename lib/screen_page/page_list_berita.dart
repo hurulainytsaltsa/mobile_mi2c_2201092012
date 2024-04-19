@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:mi2c_mobile/modal/model_berita.dart';
+import 'package:mi2c_mobile/model/model_berita.dart';
 import 'package:mi2c_mobile/screen_page/page_detail_berita.dart';
 import 'package:mi2c_mobile/screen_page/page_login_api.dart';
 import 'package:mi2c_mobile/utils/session_manager.dart';

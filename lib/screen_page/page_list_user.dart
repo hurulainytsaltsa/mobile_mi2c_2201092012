@@ -2,10 +2,10 @@ import 'dart:convert';
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:mi2c_mobile/modal/model_user.dart';
+import 'package:mi2c_mobile/model/model_user.dart';
 import 'package:http/http.dart' as http;
 
-import '../modal/model_user.dart';
+import '../model/model_user.dart';
 class PageListUser extends StatefulWidget {
   const PageListUser({super.key});
 

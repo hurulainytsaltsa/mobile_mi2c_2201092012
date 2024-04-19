@@ -4,7 +4,7 @@ import 'package:mi2c_mobile/screen_page/page_list_berita.dart';
 import 'package:mi2c_mobile/screen_page/page_register_api.dart';
 import "package:http/http.dart" as http;
 
-import '../modal/model_login.dart';
+import '../model/model_login.dart';
 import '../utils/session_manager.dart';
 
 class PageLoginApi extends StatefulWidget {

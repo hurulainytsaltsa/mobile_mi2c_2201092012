@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mi2c_mobile/screen_page/page_login_api.dart';
 import "package:http/http.dart" as http;
 
-import '../modal/model_register.dart';
+import '../model/model_register.dart';
 
 class PageRegisterApi extends StatefulWidget {
   const PageRegisterApi({super.key});

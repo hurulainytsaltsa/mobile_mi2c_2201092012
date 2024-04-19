@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:mi2c_mobile/modal/model_berita.dart';
+import 'package:mi2c_mobile/model/model_berita.dart';
 
 class DetailBerita extends StatelessWidget {
   final Datum? data;
